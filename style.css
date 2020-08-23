@@ -1,0 +1,9 @@
+body {
+	font-family: Arial;
+
+}
+
+#img {
+	background: url(./images/nature.jpg) no-repeat 100%/cover;
+	height: 300px;
+}
