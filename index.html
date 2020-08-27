@@ -10,8 +10,6 @@
 
 <body>
     <div class="content">
-        <div id="img"></div>
-
 
         <div class="rangeBox">
             <div class="filters">
@@ -22,7 +20,7 @@
                 </div>
                 <div class="filter">
                     <div><i class="fas fa-adjust"></i> Saturate</div>
-                    <input type="range" min="0" max="1000" step="1" value="100" data-filter="saturate" data-scale="%" data-default="100">
+                    <input type="range" min="0" max="999" step="1" value="100" data-filter="saturate" data-scale="%" data-default="100">
                     <span id="saturate">100%</span>
                 </div>
                 <div class="filter">
@@ -42,6 +40,8 @@
                 <button id="changeImageButton">Changer d'image</button>
             </div>
         </div>
+
+        <div id="img"></div>
     </div>
 
     <script src="./script.js" type="text/javascript"></script>
