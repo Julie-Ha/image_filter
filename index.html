@@ -2,41 +2,42 @@
 <html lang="fr">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Image Filter</title>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-	<link href="./style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Image Filter</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="./style.css" rel="stylesheet">
 </head>
 
 <body>
-	<div class="content">
-		<div id="img"></div>
+    <div class="content">
+        <div id="img"></div>
 
-		<div class="rangeBox">
-			<div class="filter">
-				<label><i class="fas fa-sun"></i> Brightness</label>
-				<input type="range" min="0" max="300" step="1" value="100" data-filter="brightness" data-scale="%">
-				<span id="brightness">100%</span>
-			</div>
-			<div class="filter">
-				<label><i class="fas fa-adjust"></i> Saturate</label>
-				<input type="range" min="0" max="1000" step="1" value="100" data-filter="saturate" data-scale="%">
-				<span id="saturate">100%</span>
-			</div>
-			<div class="filter">
-				<label><i class="fas fa-palette"></i> Hue-rotate</label>
-				<input type="range" min="0" max="360" step="1" value="0" data-filter="hue-rotate" data-scale="deg">
-				<span id="hue-rotate">0°</span>
-			</div>
-			<div class="filter">
-				<label><i class="fas fa-palette"></i> invert</label>
-				<input type="range" min="0" max="100" step="1" value="0" data-filter="invert" data-scale="%">
-				<span id="invert">0%</span>
-			</div>
-		</div>
-	</div>
 
-	<script src="./script.js" type="text/javascript"></script>
+        <div class="rangeBox">
+            <div class="filter">
+                <div><i class="fas fa-sun"></i> Brightness</div>
+                <input type="range" min="0" max="300" step="1" value="100" data-filter="brightness" data-scale="%">
+                <span id="brightness">100%</span>
+            </div>
+            <div class="filter">
+                <div><i class="fas fa-adjust"></i> Saturate</div>
+                <input type="range" min="0" max="1000" step="1" value="100" data-filter="saturate" data-scale="%">
+                <span id="saturate">100%</span>
+            </div>
+            <div class="filter">
+                <div><i class="fas fa-palette"></i> Hue-rotate</div>
+                <input type="range" min="0" max="360" step="1" value="0" data-filter="hue-rotate" data-scale="deg">
+                <span id="hue-rotate">0°</span>
+            </div>
+            <div class="filter">
+                <div><i class="fas fa-sync-alt"></i> Invert</div>
+                <input type="range" min="0" max="100" step="1" value="0" data-filter="invert" data-scale="%">
+                <span id="invert">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js" type="text/javascript"></script>
 </body>
 
 
