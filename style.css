@@ -26,14 +26,22 @@ body {
     border: 3px solid var(--main-color);
 }
 
+.filters {
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .filter {
-    padding: 1rem;
+    margin: 1rem auto;
+    width: 250px;
 }
 
 input[type=range] {
     transform: translate(0, -4px);
     -webkit-appearance: none;
-    width: 50%;
+    width: 75%;
     height: 2px;
     border-radius: 5px;
     background: var(--main-color);
@@ -64,13 +72,49 @@ input[type=range]::-moz-range-thumb {
     cursor: pointer;
 }
 
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 250px;
+    background-color: white;
+    color: var(--main-color);
+    border: 3px solid var(--main-color);
+    font-family: 'Monda', sans-serif;
+    outline: none;
+}
+
+button:hover {
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
 @media screen and (max-width: 1000px) {
     .content {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
     }
     #img {
         margin: 1rem 1rem 1rem 1rem;
+    }
+    .buttons {
+        flex-direction: row;
+    }
+    .filters {
+        margin-top: 0;
+    }
+    .filter {
+        width: 400px;
+    }
+    input[type=range] {
+        width: 85%;
     }
 }
