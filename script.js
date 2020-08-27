@@ -1,8 +1,18 @@
 const img = document.getElementById('img');
-const brightnessRange = document.getElementById('brightnessRange');
-const brightnessDisplay = document.getElementById('brightnessDisplay');
+const filterControls = document.querySelectorAll('input[type=range]');
 
-brightnessRange.addEventListener('input', () => {
-	img.style.filter = 'brightness('+ brightnessRange.value + '%)';
-	brightnessDisplay.innerText = brightnessRange.value + '%';
-})
+filterControls.forEach(function(item, index) {
+	item.addEventListener('input', () => {
+		applyFilters();
+	})
+});
+
+function applyFilters() {
+	let computedFilters = '';
+	filterControls.forEach(function(item, index) {
+		computedFilters += item.getAttribute('data-filter') + '(' + item.value + item.getAttribute('data-scale') + ') ';
+		let span = document.getElementById(item.getAttribute('data-filter'));
+		span.innerText = item.value + ((item.getAttribute('data-scale') == 'deg') ? '°' : '%');
+	});
+	img.style.filter = computedFilters;
+}
