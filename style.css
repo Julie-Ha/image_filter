@@ -18,10 +18,9 @@ body {
 
 #img {
     margin: 1rem 1rem 1rem 0;
-    background: url(./images/nature.jpg) center/cover;
 }
 
-.rangeBox {
+.config {
     margin: 1rem;
     border: 3px solid var(--main-color);
 }
@@ -110,10 +109,12 @@ button:active {
 @media screen and (max-width: 1000px) {
     .content {
         display: grid;
+        grid-auto-flow: dense;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 2fr;
+        grid-template-rows: 2fr 1fr;
     }
     #img {
+        order: -1;
         margin: 1rem 1rem 1rem 1rem;
     }
     .buttons {

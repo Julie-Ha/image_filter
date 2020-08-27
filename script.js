@@ -3,6 +3,11 @@ const filterControls = document.querySelectorAll('input[type=range]');
 const cancelButton = document.getElementById('cancelButton');
 const changeImageButton = document.getElementById('changeImageButton');
 
+const nbImage = 4;
+
+let currentImage = Math.floor(Math.random() * nbImage);
+img.style.background = "url(./images/image" + currentImage + ".jpg) center/cover";
+
 filterControls.forEach(function(item, index) {
     item.addEventListener('input', () => {
         applyFilters();
@@ -22,4 +27,16 @@ function applyFilters(apply = true) {
 
 cancelButton.addEventListener('click', () => {
     applyFilters(false);
+});
+
+changeImageButton.addEventListener('click', () => {
+    let newImageId = Math.floor(Math.random() * nbImage);
+
+    while (newImageId == currentImage) {
+        newImageId = Math.floor(Math.random() * nbImage);
+    }
+
+    currentImage = newImageId;
+    img.style.background = "url(./images/image" + newImageId + ".jpg) center/cover";
+    img.style.transition = "0.5s";
 });
